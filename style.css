@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: #ad5d5d;
+  color: white; /* You can choose the text color that provides enough contrast */
+}
+
+/* Navigation Bar*/
+
+.nav-container {
+  height: 80px;
+  width: 100%;
+  font-family: "Merriweather", serif;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-left {
+  width: 25%;
+  display: flex;
+  /*justify-content: center; If i give this then i can't allign items by giving padding, margin etc*/
+  align-items: center;
+}
+
+.nav-middle {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-middle img {
+  max-width: 65%;
+  height: auto;
+}
+
+.nav-right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-container a:link {
+  color: #377971;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Unvisited link */
+.nav-container a:link {
+  color: #377971;
+}
+
+/* Visited link */
+.nav-container a:visited {
+  color: #377971;
+}
+
+/* Link on hover */
+.nav-container a:hover {
+  color: #BF7F5A;
+}
+
+/* Active link (being clicked) */
+.nav-container a:active {
+  color: red;
+}
+
+
+#shop {
+  margin-left: 40px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+#about {
+  margin-left: 60px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+.nav-right a {
+  text-decoration: none;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Hero Section */
+
+.hero-section {
+  position: relative;
+  height: 1000px;
+  background-color: /*#d59988*//* #E1AF8C*/
+    #377971;
+}
+
+.hero-section img {
+  position: absolute; /* Position the image absolutely within the container */
+  left: 50px; /* Position the image to the left */
+  top: 20px;
+  height: 80%; /* Set the height of the image to match the container */
+  width: auto; /* Width will adjust automatically to maintain aspect ratio */
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.hero-section img:hover {
+  transform: scale(1.01);
+}
+
+.text-container {
+  font-family: "Merriweather", serif;
+  color: white;
+  position: absolute;
+  left: 777px;
+  top: 150px;
+}
+
+#welcome-text {
+  font-size: 55px;
+}
+
+#brand-name {
+  color: #e2b08d;
+  font-size: 50px;
+}
+
+#sub-text {
+  font-family: "Qwitcher Grypen", cursive;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.custom-button {
+  font-family: "Merriweather", serif;
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #a65151;
+}
+
+/* Our Collection Section*/
+
+#collection-text {
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  font-family: "Merriweather", serif;
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+}
+
+#collection-line {
+  position: absolute;
+  left: 486px;
+  bottom: 25px;
+  width: 290px;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Vertically center content */
+}
+
+.image-section {
+  flex: 1; /* Take up 1/2 of the available space */
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  max-width: 50%; /* Limit maximum width */
+  position: relative; /* For positioning child elements */
+}
+
+.image-section img {
+  margin-top: 20px;
+  width: 60%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #000; /* Add border to the image */
+}
+
+.image-section img:hover {
+  opacity: 0.95;
+  box-shadow: 3px 3px 6px #daa581; /* Add shadow to the container */
+}
+
+.text-section {
+  flex: 1;
+  display: flex;
+  max-width: 50%;
+  position: relative;
+}
+
+.text-section p {
+  color: #326592;
+  font-family: "Merriweather", serif;
+  font-size: 35px;
+  margin-left: 30%;
+  text-align: center;
+  max-width: 100%;
+  white-space: normal; /* Allow text to wrap */
+}
+
+.text-section p::before {
+  content: "";
+  position: absolute;
+  left: 120px; /* Adjust the distance from the text */
+  top: -39px;
+  height: 120px;
+  width: 2px; /* Width of the vertical line */
+  background-color: #326592; /* Color of the vertical line */
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  width: 100%; /* Make sure the footer spans the whole width */
+  font-family: "Montserrat", sans-serif;
+  color: #ffe5ff;
+  margin-top: 7%;
+  height: 300px;
+  background-color: #377971;
+}
+
+#services,
+#contact {
+  flex: 1; /* Take up equal space in their respective halves */
+  position: relative;
+}
+
+#services h2 {
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+#contact h2 {
+  margin-top: 50px;
+  margin-left: 240px;
+}
+
+.services-text {
+  margin-left: 120px;
+  margin-top: 35px;
+}
+
+.contact-text {
+  margin-left: 150px;
+  margin-top: 35px;
+  width: 350px;
+  height: 190px;
+}
+
+ul {
+  list-style-position: inside; /* Place bullet points inside the box */
+  padding-left: 0; /* Remove default padding */
+}
